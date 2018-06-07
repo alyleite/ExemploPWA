@@ -32,8 +32,6 @@ Para realizar o deploy no Github Pages:
 
 ```bash
 ng build --prod --base-href "https://alyleite.github.io/ExemploPWA"
-```
 
-```bash
 ngh --no-silent --dir dist/ExemploPWA
 ```
