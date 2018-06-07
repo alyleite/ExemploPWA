@@ -31,7 +31,7 @@ To get more help on the Angular CLI use `ng help` or go check out the [Angular C
 Para realizar o deploy no Github Pages:
 
 ```bash
-ng build --prod --base-href "https://alyleite.github.io/ExemploPWA"
+ng build --prod --base-href "https://alyleite.github.io/ExemploPWA/"
 
 ngh --no-silent --dir dist/ExemploPWA
 ```
