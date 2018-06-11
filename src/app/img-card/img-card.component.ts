@@ -1,11 +1,11 @@
 import { Component, OnInit } from '@angular/core';
+import { DogService } from '../services/dog.service';
 
 
 
-class CatImage {
+class DogImage {
   message: string;
-  api: string;
-  fontsize: number;
+  status: string;
 }
 
 @Component({
@@ -16,22 +16,22 @@ class CatImage {
 
 export class ImgCardComponent implements OnInit {
 
-  private image: CatImage = {
-    message: 'Exemplo de um aplicativo PWA',
-    api: 'https://cataas.com/cat/says/',
-    fontsize: 40
-  };
   public src: string;
 
-  constructor() { }
+  constructor(private dogService:DogService ) { }
 
   ngOnInit() {
     this.generateSrc();
   }
   public generateSrc(): void {
-    this.src = this.image.api + this.image.message + 
-      '?size=' + this.image.fontsize +
-      '&ts=' + Date.now();
+    this.dogService.getRandomDog()
+    .subscribe((resp:DogImage) => {
+      this.src = resp.message;
+    });
+
+    // this.src = this.image.api + this.image.message + 
+    //   '?size=' + this.image.fontsize +
+    //   '&ts=' + Date.now();
   }
 
 }
