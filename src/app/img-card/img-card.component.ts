@@ -17,16 +17,21 @@ class DogImage {
 export class ImgCardComponent implements OnInit {
 
   public src: string;
-
+  isImageLoading = false;
   constructor(private dogService:DogService ) { }
 
   ngOnInit() {
     this.generateSrc();
   }
   public generateSrc(): void {
+    this.isImageLoading = true;
     this.dogService.getRandomDog()
     .subscribe((resp:DogImage) => {
       this.src = resp.message;
+      this.isImageLoading = false;
+    }, error => {
+      this.isImageLoading = false;
+      console.log(error);
     });
 
     // this.src = this.image.api + this.image.message + 

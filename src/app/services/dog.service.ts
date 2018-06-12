@@ -6,10 +6,11 @@ import {HttpClient} from '@angular/common/http';
 })
 export class DogService {
 
-  constructor(public http: HttpClient) {
+  constructor(private http: HttpClient) {
   }
 
   getRandomDog() {
     return this.http.get(`https://dog.ceo/api/breeds/image/random`);
   }
+
 }

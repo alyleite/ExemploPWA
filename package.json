@@ -24,8 +24,10 @@
     "@angular/router": "^6.0.3",
     "@angular/service-worker": "^6.0.3",
     "core-js": "^2.5.4",
+    "node-sass": "^4.9.0",
     "normalize.css": "^8.0.0",
     "rxjs": "^6.0.0",
+    "sass-loader": "^7.0.3",
     "zone.js": "^0.8.26"
   },
   "devDependencies": {

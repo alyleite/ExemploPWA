@@ -9,13 +9,14 @@ import { environment } from '../environments/environment';
 
 import { ImgCardComponent } from './img-card/img-card.component';
 import { DogService } from './services/dog.service';
-import { HttpClient, HttpClientModule, HttpClientXsrfModule, HttpHandler } from '@angular/common/http';
-import { HttpInterceptingHandler } from '@angular/common/http/src/module';
+import {HttpClientModule} from '@angular/common/http';
+import { LoadingSpinnerComponent } from './loading-spinner/loading-spinner.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    ImgCardComponent
+    ImgCardComponent,
+    LoadingSpinnerComponent
   ],
   imports: [
     BrowserModule,
@@ -23,15 +24,12 @@ import { HttpInterceptingHandler } from '@angular/common/http/src/module';
     MatToolbarModule,
     MatCardModule,
     MatButtonModule,
-    HttpClientXsrfModule.withOptions({
-        cookieName: 'XSRF-TOKEN',
-        headerName: 'X-XSRF-TOKEN'
-    })
+    // Include it under 'imports' in your application module
+    // after BrowserModule.
+    HttpClientModule,
   ],
   providers: [
-    DogService,
-    HttpClient,
-    { provide: HttpHandler, useClass: HttpInterceptingHandler },
+    DogService
   ],
   bootstrap: [AppComponent]
 })
