@@ -1,6 +1,6 @@
 <mat-card>
   <mat-card-actions>
-    <button color="primary" (click)="generateSrc()" mat-button mat-raised-button>Cachorro?</button>
+    <button color="primary" (click)="generateSrc()" disabled="{{ button.disabled }}" color="{{ button.color }}" mat-button mat-raised-button>{{ button.text }}</button>
   </mat-card-actions>
   <img src="{{ src }}" alt="Outro bicho" mat-card-image *ngIf="!isImageLoading; else noImageFound">
 
