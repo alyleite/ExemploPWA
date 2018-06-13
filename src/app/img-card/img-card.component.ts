@@ -24,6 +24,7 @@ export class ImgCardComponent implements OnInit {
 
   public src: string;
   isImageLoading = false;
+  image = true;
 
   public button: Button = {
     text: 'Cachorro?',
@@ -34,7 +35,6 @@ export class ImgCardComponent implements OnInit {
   constructor(private dogService:DogService ) { }
 
   ngOnInit() {
-    this.generateSrc();
     if (!navigator.onLine) {
       this.button.text = 'Sorry, you\'re offline';
       this.button.disabled = true;
@@ -43,15 +43,26 @@ export class ImgCardComponent implements OnInit {
     }
   }
   public generateSrc(): void {
+    
+    if (!navigator.onLine) {
+      this.button.text = 'Sorry, you\'re offline';
+      this.button.disabled = true;
+      return;
+    }
     this.isImageLoading = true;
+
     this.dogService.getRandomDog()
-    .subscribe((resp:DogImage) => {
-      this.src = resp.message;
-      this.isImageLoading = false;
-    }, error => {
-      this.isImageLoading = false;
-      console.log(error);
-    });
+      .subscribe((response:DogImage) => {
+          if (response.status !== "success") {
+            console.log('Looks like there was a problem. ' + response.status);
+          } else {
+            this.src = response.message;
+          }
+          this.isImageLoading = false;
+        }, error => {
+          this.isImageLoading = false;
+           console.log(error);
+        });
   }
 
 }

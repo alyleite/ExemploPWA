@@ -8,7 +8,11 @@
       "sourceRoot": "src",
       "projectType": "application",
       "prefix": "app",
-      "schematics": {},
+      "schematics": {
+        "@schematics/angular:component": {
+          "styleext": "scss"
+        }
+      },  
       "architect": {
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
@@ -94,6 +98,19 @@
             "exclude": [
               "**/node_modules/**"
             ]
+          }
+        },
+        "app-shell": {
+          "builder": "@angular-devkit/build-angular:app-shell",
+          "options": {
+            "browserTarget": "ExemploPWA:build",
+            "serverTarget": "ExemploPWA:serve",
+            "route": "shell"
+          },
+          "configurations": {
+            "production": {
+              "browserTarget": "ExemploPWA:build:production"
+            }
           }
         }
       }
