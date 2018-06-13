@@ -1,7 +1,8 @@
 {
     "name": "Examplo - Angular Progressive Web App",
     "short_name": "ExemploPWA",
-    "start_url": "./",
+    "scope": "/",
+    "start_url": "/",
     "theme_color": "#008080",
     "background_color": "#008B8B",
     "display": "standalone",

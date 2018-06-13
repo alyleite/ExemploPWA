@@ -9,7 +9,7 @@
       "urls": [
         "https://alyleite.github.io/ExemploPWA/favicon.ico",
         "https://alyleite.github.io/ExemploPWA/index.html",
-        "https://alyleite.github.io/ExemploPWA/main.479a7b29834aac78ec67.js",
+        "https://alyleite.github.io/ExemploPWA/main.f639fba58c169c6c286b.js",
         "https://alyleite.github.io/ExemploPWA/polyfills.2f4a59095805af02bd79.js",
         "https://alyleite.github.io/ExemploPWA/runtime.a66f828dca56eeb90e02.js",
         "https://alyleite.github.io/ExemploPWA/styles.9053770ba67f608f890d.css"
@@ -36,8 +36,8 @@
     "https://alyleite.github.io/ExemploPWA/assets/icons/icon-256x256.png": "aa794bf00591bd06c9fee00126b321baa155ee8d",
     "https://alyleite.github.io/ExemploPWA/assets/icons/icon-512x512.png": "ad9b5746e8a586f161f92b21f97c4cd81b157965",
     "https://alyleite.github.io/ExemploPWA/favicon.ico": "84161b857f5c547e3699ddfbffc6d8d737542e01",
-    "https://alyleite.github.io/ExemploPWA/index.html": "8b655ae5812d14440bb8bd52872030ce05d37a9d",
-    "https://alyleite.github.io/ExemploPWA/main.479a7b29834aac78ec67.js": "5354695e66f765177e891075526b67512b6c096c",
+    "https://alyleite.github.io/ExemploPWA/index.html": "c19474894c775de875c1acf332229bb27419ffe0",
+    "https://alyleite.github.io/ExemploPWA/main.f639fba58c169c6c286b.js": "8b934b1dcb93d529ab62b7c2ea483cd99e73e8f1",
     "https://alyleite.github.io/ExemploPWA/polyfills.2f4a59095805af02bd79.js": "8949bb1b1e302dda246f6ed9c2da703270360b1f",
     "https://alyleite.github.io/ExemploPWA/runtime.a66f828dca56eeb90e02.js": "078e320cc6fdaf355836c3b1c52b059cdd33fc7e",
     "https://alyleite.github.io/ExemploPWA/styles.9053770ba67f608f890d.css": "823a1f20a7a4f9caf556ecfac081f4c680fe1769"
